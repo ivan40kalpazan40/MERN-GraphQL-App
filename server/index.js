@@ -1,4 +1,5 @@
 const exapress = require('express');
+const cors = require('cors');
 const colors = require('colors');
 require('dotenv').config();
 const { graphqlHTTP } = require('express-graphql');
@@ -9,7 +10,7 @@ const app = exapress();
 
 // Connect to database
 connectDB();
-
+app.use(cors());
 app.use(
   '/graphql',
   graphqlHTTP({
