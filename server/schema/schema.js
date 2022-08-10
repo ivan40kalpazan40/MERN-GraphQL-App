@@ -23,7 +23,7 @@ const ClientType = new GraphQLObjectType({
   }),
 });
 
-// Client Type
+// Project Type
 const ProjectType = new GraphQLObjectType({
   name: 'Project',
   fields: () => ({
@@ -153,7 +153,7 @@ const mutation = new GraphQLObjectType({
             name: 'ProjectStatusUpdate',
             values: {
               new: { value: 'Not Started' },
-              started: { value: 'In Progress' },
+              progress: { value: 'In Progress' },
               completed: { value: 'Completed' },
             },
           }),
